@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>VSR Train Ticket Booking</title>
+    <link rel="stylesheet" href="cssfile/nav.css">
+    <link rel="stylesheet" href="cssfile/footer.css">
+    <!--  <link rel="stylesheet" type="text/css" href="cssfile/container.css">-->
+    <link rel="stylesheet" type="text/css" href="cssfile/videoedit.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <style type="text/css">
+        body {
+            background-image: url(image/Train.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+        
+        #container {
+            height: 100vh;
+            width: 100%;
+            background-image: url(image/t1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            transition: 2s;
+            font-family: cursive;
+            animation-name: animate;
+            animation-direction: alternate-reverse;
+            animation-duration: 40s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes animate {
+            0% {
+                background-image: url(image/Train.jpg);
+            }
+            10% {
+                background-image: url(image/t1.jpg);
+            }
+            20% {
+                background-image: url(image/t2.jpg);
+            }
+            30% {
+                background-image: url(image/t4.jpg);
+            }
+            40% {
+                background-image: url(image/t5.jpg);
+            }
+            50% {
+                background-image: url(image/t6.jpg);
+            }
+            60% {
+                background-image: url(image/t7.jpg);
+            }
+            70% {
+                background-image: url(image/t3.jpg);
+            }
+            80% {
+                background-image: url(image/t9.jpg);
+            }
+            90% {
+                background-image: url(image/t.jpg);
+            }
+            100% {
+                background-image: url(image/Train.jpg);
+            }
+        }
+        
+        .home_details {
+            color: #fff;
+            font-family: inherit;
+            font-size: 74px;
+            padding: 162px 5px 5px 185px;
+        }
+        
+        .font {
+            color: #F9522E;
+        }
+        
+        .btnHome {
+            font-family: inherit;
+            background-color: #F9522E;
+            padding: 13px 44px 13px 44px;
+            font-size: 18px;
+            border-style: none;
+        }
+        
+        .btnHome:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="container">
+
+        <nav type="nav">
+            <div class="menu-icon"><span class="fas fa-bars"></span></div>
+            <div class="logo" style="color:red;">VSR
+                <span>Train</span>
+            </div>
+
+
+
+            <div class="nav-items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="help.html">Help</a></li>
+                <!--   <li><a href="#">Ticket Book</a></li>-->
+
+                <!--<li><a href="Choice.html">V.Choice</a></li>-->
+                <!-- <li><a href="#">Packages</a></li>-->
+                <li><a href="TloginMenu.html">Login</a>
+                    <a href="TsignUp.php">/Sign Up</a></li>
+                <li><a href="Tdetails.php">Details</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <!--<li><a href="slide.html">Services</a></li>-->
+            </div>
+            <div class="search-icon"><span class="fas fa-search"></span></div>
+            <div class="cancel-icon"><span class="fas fa-times"></span></div>
+
+            <form action="#">
+                <input type="search" class="search-data" placeholder="Search" required>
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+
+
+        </nav>
+
+        <script>
+            const menuBtn = document.querySelector(".menu-icon span");
+            const searchBtn = document.querySelector(".search-icon");
+            const cancelBtn = document.querySelector(".cancel-icon");
+            const items = document.querySelector(".nav-items");
+            const form = document.querySelector("form");
+            menuBtn.onclick = () => {
+                items.classList.add("active");
+                menuBtn.classList.add("hide");
+                searchBtn.classList.add("hide");
+                cancelBtn.classList.add("show");
+            }
+            cancelBtn.onclick = () => {
+                items.classList.remove("active");
+                menuBtn.classList.remove("hide");
+                searchBtn.classList.remove("hide");
+                cancelBtn.classList.remove("show");
+                form.classList.remove("active");
+                cancelBtn.style.color = "#ff3d00";
+            }
+            searchBtn.onclick = () => {
+                form.classList.add("active");
+                searchBtn.classList.add("hide");
+                cancelBtn.classList.add("show");
+            }
+        </script>
+
+
+
+        <h1 class="home_details">Your Train Pass.Anytime. <br>
+            <font class="font">Anywhere..</font>
+
+            <br>
+
+
+            <!-- <a href="signUp.html"> <button class="btnHome">SIGN UP NOW</button></a>-->
+
+
+
+        </h1>
+
+
+
+        <!-- <div class="section">
+
+        <video autoplay loop muted class="section">
+                        
+                                  <source src="video/v2.mp4" type="video/mp4">
+
+                      </video>-->
+
+
+    </div>
+    <!--section-->
+
+
+
+
+    <!--this is the footer calling-->
+    <footer class="footer" style="height: 93vh; ">
+        <div class="footerInfo">
+            <div class="footerContainer">
+                <div class="footerItem">
+
+                    <div class="socialInfo">
+                        <div class="mainTitle">
+                            <h4> Follow Us <span></span></h4>
+                        </div>
+                        <div class="socialItem">
+                            <div class="socialLink facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="socialLink instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="socialLink twitter">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="socialInfo">
+                        <div class="mainTitle">
+                            <h4> Service <span></span></h4>
+                        </div>
+                        <div class="socialItem">
+                            <a href="#"> Emergency Health care </a>
+                            <a href="#"> check up</a>
+                            <a href="#"> treatment of personal diseases </a>
+
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="socialInfo">
+                        <div class="mainTitle">
+                            <h4> Company Info <span></span></h4>
+                        </div>
+                        <div class="socialItem">
+                            <a href="#"> Terms and Conditions </a>
+                            <a href="#"> FAQ</a>
+                            <a href="#"> Privacy Policy </a>
+
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="socialInfo">
+                        <div class="mainTitle">
+                            <h4> Address <span></span></h4>
+                        </div>
+                        <h5 class="addressTitle">Bangladesh - Chattogram</h5>
+                        <div class="callInfo">
+                            <h6>Call</h6> <i class="fas fa-arrow-right"></i>
+                            <span>+8801571736651</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
